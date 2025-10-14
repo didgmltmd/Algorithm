@@ -1,3 +1,5 @@
+//https://www.acmicpc.net/problem/1012
+
 const fs = require("fs");
 const [t, ...input] = fs
     .readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
