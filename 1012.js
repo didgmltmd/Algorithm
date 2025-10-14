@@ -1,4 +1,4 @@
-//https://www.acmicpc.net/problem/1012
+//https://www.acmicpc.net/problem/1012 BFS 사용문제
 
 const fs = require("fs");
 const [t, ...input] = fs
