@@ -1,35 +1,22 @@
-// https://www.acmicpc.net/problem/1003
-
-
 const fs = require('fs');
-const [N,...L] = fs.readFileSync(process.platform == "linux" ? "/dev/stdin": "./input.txt")
+const input = fs.readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
                 .toString()
                 .trim()
                 .split("\n")
-                .map((data) => data.replace('\r',""))
-                .map((data) => Number(data))
+                .map(Number);
 
+const T = input[0];
+const cases = input.slice(1);
 
-for(let i = 0; i< L.length;i++){
-    let zeroCount = 0;
-    let oneCount = 0;
-    const fibonacci = (num) => {
-        if(num != 1 && num != 0){
-            return fibonacci(num-1) + fibonacci(num-2)
-        }else if(num === 10){
-            zeroCount+=34;
-            oneCount+= 55;
-            return;
-        }
-        else if(num === 0){
-            zeroCount++;
-            return 0;
-        } else if(num === 1){
-            oneCount++;
-            return 1;
-        } 
-    }
+const dp = Array.from({ length: 41 }, () => [0, 0]);
+dp[0] = [1, 0];
+dp[1] = [0, 1];
 
-    fibonacci(L[i]);
-    console.log(zeroCount, oneCount);
+for (let i = 2; i <= 40; i++) {
+  dp[i][0] = dp[i - 1][0] + dp[i - 2][0];
+  dp[i][1] = dp[i - 1][1] + dp[i - 2][1];
 }
+
+cases.forEach(n => {
+  console.log(dp[n][0], dp[n][1]);
+});
