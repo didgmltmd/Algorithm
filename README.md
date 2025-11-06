@@ -51,4 +51,4 @@ const N = fs
 백준 프로필
 
 Baekjoon ID: gomboy11
-🔗 [https://www.acmicpc.net/user/didgmltmd](https://www.acmicpc.net/user/gomboy11)
+🔗 [https://www.acmicpc.net/user/gomboy11](https://www.acmicpc.net/user/gomboy11)
