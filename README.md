@@ -1,4 +1,4 @@
-# Algorithm Repository
+# Algorithm study Repository
 
 > 이 저장소는 알고리즘 문제 풀이 및 공부 과정을 정리하기 위한 공간입니다.  
 > 꾸준한 문제 풀이와 코드 개선을 통해 문제 해결 능력을 향상시키는 것을 목표로 합니다.
